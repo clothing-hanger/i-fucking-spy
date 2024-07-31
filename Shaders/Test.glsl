@@ -1,3 +1,2 @@
 vec4 effect() {
-    
 }
