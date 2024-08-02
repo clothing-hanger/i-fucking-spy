@@ -56,11 +56,10 @@ function love.load()
     -- Setup Libraries
     Input = (require("Libraries.Baton")).new({
         controls = {
-            GameLeft  =  { "key:a" },
-            GameDown  =  { "key:s" },
-            GameUp    =  { "key:w" },
-            GameRight =  { "key:d" },
-            GameDash  =  { "key:space" }
+            Left = {"key:left"},
+            Right = {"key:right"},
+            Up = {"key:up"},
+            Down = {"key:down"}
         }
     })
     Class = require("Libraries.Class")
@@ -74,6 +73,7 @@ function love.load()
     Objects = require("Modules.Objects")
     require("Modules.Findables")
     require("Modules.Riddle")
+    require("Modules.RiddleEditor")
     require("Modules.Debug")
 
     Cursor = Objects.UI.Cursor
@@ -96,6 +96,8 @@ function love.draw()
         love.graphics.setCanvas(GameScreen)
             love.graphics.clear(0,0,0,1)
             State.draw()
+            if Cursor then Cursor:draw() end
+
         love.graphics.setCanvas()
     love.graphics.pop()
 
@@ -106,7 +108,6 @@ function love.draw()
     -- draw game screen with the calculated ratio and center it on the screen
     love.graphics.setShader(Shaders.CurrentShader)
     love.graphics.draw(GameScreen, Inits.WindowWidth/2, Inits.WindowHeight/2, 0, ratio, ratio, Inits.GameWidth/2, Inits.GameHeight/2)
-    if Cursor then Cursor:draw() end
 
     love.graphics.setShader()
 
