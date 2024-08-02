@@ -40,8 +40,7 @@ function TestFindable:giveColor()
 end
 
 function TestFindable:draw()
-    love.graphics.translate(Inits.WindowWidth/2, Inits.WindowHeight/2)
-    love.graphics.translate(-Inits.WindowWidth/2, -Inits.WindowHeight/2)
+
     love.graphics.rectangle("fill", self.x, self.y, self.width, self.height)
 end
 

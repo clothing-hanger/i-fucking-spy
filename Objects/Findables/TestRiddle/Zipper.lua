@@ -1,7 +1,7 @@
-local Joe = Class:extend()
+local Zipper = Class:extend()
 
-function Joe:new(x,y,r,sx,sy,riddleText)
-    self.name = "Joe"
+function Zipper:new(x,y,r,sx,sy,riddleText)
+    self.name = "Zipper"
     self.x, self.y = (x or 0), (y or 0)
     self.rotation = (r or 0)
     self.scaleX = (sx or 1)
@@ -14,11 +14,11 @@ function Joe:new(x,y,r,sx,sy,riddleText)
     self.height = self.image:getHeight()*self.scaleY
 end
 
-function Joe:update(dt)
+function Zipper:update(dt)
 
 end
 
-function Joe:givePosition()
+function Zipper:givePosition()
     return{
         X = self.x,
         Y = self.y,
@@ -27,30 +27,29 @@ function Joe:givePosition()
     }
 end
 
-function Joe:onClick()
+function Zipper:onClick()
     print(self.name ..  " Found!")
     self.found = true
     self.color = {0,1,1}
 end
 
 
-function Joe:giveRiddleText()
+function Zipper:giveRiddleText()
     return self.riddleText
 end
 
-function Joe:giveColor()
+function Zipper:giveColor()
     return self.color
 end
 
-function Joe:draw()
-    love.graphics.translate(Inits.WindowWidth/2, Inits.WindowHeight/2)
-    love.graphics.translate(-Inits.WindowWidth/2, -Inits.WindowHeight/2)
+function Zipper:draw()
+
     love.graphics.rectangle("fill", self.x, self.y, self.width, self.height)
     love.graphics.draw(self.image, self.x, self.y, self.r, self.scaleX, self.scaleY)
 end
 
-function Joe:release()
+function Zipper:release()
 
 end
 
-return Joe
+return Zipper

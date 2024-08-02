@@ -2,13 +2,13 @@ local Cursor = Class:extend()
 
 function Cursor:new()
     self.name = "cursor"
-    self.x, self.y = love.mouse.getPosition()
+    self.x, self.y = toGameScreen(love.mouse.getPosition())
     self.color = {1,1,1}
     print("cursor created")
 end
 
 function Cursor:update(dt)
-    self.x, self.y = love.mouse.getPosition()
+    self.x, self.y = toGameScreen(love.mouse.getPosition())
 end
 
 function Cursor:checkClick()
@@ -27,8 +27,6 @@ function Cursor:checkClick()
 end
 
 function Cursor:draw()
-    love.graphics.translate(Inits.WindowWidth/2, Inits.WindowHeight/2)
-    love.graphics.translate(-Inits.WindowWidth/2, -Inits.WindowHeight/2)
     love.graphics.setColor(1,1,1)
     love.graphics.rectangle("fill", self.x, self.y, 10,10)
 end

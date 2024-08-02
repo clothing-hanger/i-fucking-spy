@@ -2,11 +2,18 @@ local TestRiddle = State()
 
 function TestRiddle:enter()
     Findables = {
-        Sal = {Findable = Objects.Findables.TestRiddle.Sal(), X = 100, Y = 100, R = 0, SX = 0.3, SY = 0.3, riddleText = "Sal, ", ID = 1},
-        Joe = {Findable = Objects.Findables.TestRiddle.Joe(), X = 450, Y = 10, R = 0, SX = 0.3, SY = 0.3, riddleText = "Joe, ", ID = 2},
-        Murr = {Findable = Objects.Findables.TestRiddle.Murr(), X = 10, Y = 600, R = 0, SX = 0.3, SY = 0.3, riddleText = "Murr, ", ID = 3},
-        Q = {Findable = Objects.Findables.TestRiddle.Q(), X = 700, Y = 450, R = 0, SX = 0.3, SY = 0.3, riddleText = "and Q.", ID = 4},
+        Can = {Findable = Objects.Findables.TestRiddle.Can(), X = 500, Y = 300, R = 0, SX = 1, SY = 1, riddleText = "a can, ", ID = 1},
+        Clippers = {Findable = Objects.Findables.TestRiddle.Clippers(), X = 500, Y = 300, R = 0, SX = 1, SY = 1, riddleText = "a can, ", ID = 2},
+        Egg = {Findable = Objects.Findables.TestRiddle.Egg(), X = 500, Y = 300, R = 0, SX = 1, SY = 1, riddleText = "a can, ", ID = 3},
+        Fry = {Findable = Objects.Findables.TestRiddle.Fry(), X = 500, Y = 300, R = 0, SX = 1, SY = 1, riddleText = "a can, ", ID = 4},
+        Sanitizer = {Findable = Objects.Findables.TestRiddle.Sanitizer(), X = 500, Y = 300, R = 0, SX = 1, SY = 1, riddleText = "a can, ", ID = 5},
+        Sausage = {Findable = Objects.Findables.TestRiddle.Sausage(), X = 500, Y = 300, R = 0, SX = 1, SY = 1, riddleText = "a can, ", ID = 6},
+        Wrapper = {Findable = Objects.Findables.TestRiddle.Wrapper(), X = 500, Y = 300, R = 0, SX = 1, SY = 1, riddleText = "a can, ", ID = 7},
+        Zipper = {Findable = Objects.Findables.TestRiddle.Zipper(), X = 500, Y = 300, R = 0, SX = 1, SY = 1, riddleText = "a can, ", ID = 8},
+
     }
+
+
 
     for Name, Findable in pairs(Findables) do
         Findable.Findable:new(Findable.X, Findable.Y, Findable.R, Findable.SX, Findable.SY, Findable.riddleText)

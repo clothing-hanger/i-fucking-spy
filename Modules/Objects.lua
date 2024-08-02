@@ -1,11 +1,14 @@
 return {
     Findables = {
         TestRiddle = {
-            TestFindable = require("Objects.Findables.TestRiddle.TestFindable"),
-            Sal = require("Objects.Findables.TestRiddle.Sal"),
-            Murr = require("Objects.Findables.TestRiddle.Murr"),
-            Joe = require("Objects.Findables.TestRiddle.Joe"),
-            Q = require("Objects.Findables.TestRiddle.Q"),
+            Can = require("Objects.Findables.TestRiddle.Can"),
+            Clippers = require("Objects.Findables.TestRiddle.Clippers"),
+            Egg = require("Objects.Findables.TestRiddle.Egg"),
+            Fry = require("Objects.Findables.TestRiddle.Fry"),
+            Sanitizer = require("Objects.Findables.TestRiddle.Sanitizer"),
+            Sausage = require("Objects.Findables.TestRiddle.Sausage"),
+            Wrapper = require("Objects.Findables.TestRiddle.Wrapper"),
+            Zipper = require("Objects.Findables.TestRiddle.Zipper"),
         },
     },
     UI = {

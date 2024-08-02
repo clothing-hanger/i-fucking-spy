@@ -43,8 +43,7 @@ function Q:giveColor()
 end
 
 function Q:draw()
-    love.graphics.translate(Inits.WindowWidth/2, Inits.WindowHeight/2)
-    love.graphics.translate(-Inits.WindowWidth/2, -Inits.WindowHeight/2)
+
     love.graphics.rectangle("fill", self.x, self.y, self.width, self.height)
     love.graphics.draw(self.image, self.x, self.y, self.r, self.scaleX, self.scaleY)
 end
